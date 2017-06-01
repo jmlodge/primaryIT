@@ -1,0 +1,22 @@
+{
+  "name": "primary_it",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jmlodge"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jmlodge/primaryIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  }
+}
