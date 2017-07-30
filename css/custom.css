@@ -1,3 +1,6 @@
 body{
     padding-top: 70px;
+    background-image: url("/media/img/wormhole.jpg");
+    background-size: cover;
 }
+
