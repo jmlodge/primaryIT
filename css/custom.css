@@ -1,6 +1,44 @@
-body{
-    padding-top: 70px;
-    background-image: url("/media/img/wormhole.jpg");
-    background-size: cover;
+/* 1 - Home*/
+
+.home-page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
+.home-page .home-title {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100vh;
+    background: url("/media/img/wormhole.jpg") no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.home-page .home-title h1 {
+    flex: 2;
+    font-size: 6em;
+    line-height: 10px;
+    color: #fff;
+    position: relative;
+    top: 115px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.home-page .home-title p {
+    flex: 1;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+}
+
+/* # - Contact*/
+
+.contact-page {
+    padding-top: 70px;
+}
