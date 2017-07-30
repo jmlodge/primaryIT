@@ -18,4 +18,9 @@ angular.module('PrimaryITApp').config(function ($locationProvider, $routeProvide
         controller: 'ServicesController'
     })
 
+    .when('/contact', {
+        templateUrl: 'templates/contact.html',
+        controller: 'ContactController'
+    })
+
 });

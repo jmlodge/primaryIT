@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6">
+        <form name="contactForm" data-ng-submit="submitForm()" novalidate>
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="firstname" class="form-control" data-ng-model="contact.firstname" required>
+                <p data-ng-show="contactForm.firstname.$pristine" class="help-block">Please enter your First Name</p>
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="lastname" class="form-control" data-ng-model="contact.lastname" required>
+                <p data-ng-show="contactForm.lastname.$pristine" class="help-block">Please enter your Last Name</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Submit</button>
+
+        </form>
+    </div>
+</div>
