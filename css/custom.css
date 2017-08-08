@@ -1,3 +1,33 @@
+/* Nav*/
+.navbar-inverse {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > li {
+    color: #ffffff;
+    border-right: 1px solid white;
+}
+
+.navbar-inverse .navbar-nav > li:last-child {
+    border-right: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-brand > img {
+    width: 120px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+
+
+
 /* 1 - Home*/
 
 .home-page {
@@ -5,6 +35,10 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: stretch;
+}
+
+.home-container {
+
 }
 
 .home-page .home-title {
@@ -25,7 +59,7 @@
     line-height: 10px;
     color: #fff;
     position: relative;
-    top: 115px;
+    top: 175px;
     font-family: 'Fredoka One', cursive;
 }
 
@@ -37,8 +71,114 @@
     font-family: 'Fredoka One', cursive;
 }
 
+.home-service {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: stretch;
+    background: url("/media/img/planet-space-art.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.service-card {
+    height: 300px;
+    width: 400px;
+    margin: 20px;
+    border: white;
+    background-color: #444444;
+}
+
+.home-test {
+    height: auto;
+    background-color: #7a43b6;
+    opacity: 0.6;
+}
+
+/* carousel */
+
+.row h2 {
+	text-align: center;
+	margin-top: 40px;
+	font-weight: bold;
+}
+
+#quote-carousel {
+	padding: 0 10px 30px 10px;
+	margin-top: 25px;
+}
+
+#quote-carousel .carousel-control {
+	background: none;
+	color: #ff8533;
+	font-size: 2em;
+	text-shadow: none;
+	margin-top: 30px;
+}
+
+#quote-carousel .carousel-indicators {
+	position: absolute;
+	right: 50%;
+	top: auto;
+	bottom: 0;
+	margin-top: 20px;
+	margin-bottom: -40px;
+}
+
+@media (max-width: 800px) {
+	#quote-carousel .carousel-indicators {
+		margin-bottom: -15px;
+	}
+}
+
+#quote-carousel .carousel-indicators li {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border:  2px solid #008080;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	opacity: 0.4;
+	overflow: hidden;
+	transition: all .4s ease-in;
+	vertical-align: middle;
+}
+
+#quote-carousel .carousel-indicators .active {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+    transition: all .2s;
+}
+
+@media (max-width: 800px) {
+	#quote-carousel .carousel-indicators .active {
+		width: 80px;
+		height: 80px;
+	}
+}
+.item blockquote {
+    border-left: none;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 600px) {
+	.item blockquote {
+		margin-bottom: 35%;
+	}
+}
+
+.item blockquote p:before {
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+.fa {
+	color: #ff8533;
+}
+
 /* # - Contact*/
 
 .contact-page {
-    padding-top: 70px;
+    padding-top: 120px;
 }
