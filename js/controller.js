@@ -3,6 +3,7 @@ angular.module('RouteControllers', [])
     .controller('HomeController', function ($scope) {
        $scope.title = "Welcome to PrimaryIT!";
        $scope.subtitle = "Don't Panic, We Have A Solution For You!";
+       $scope.image = [{src: 'media/img/atom.png'}];
     })
 
     .controller('ContactController', function ($scope) {

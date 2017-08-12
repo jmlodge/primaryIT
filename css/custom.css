@@ -24,28 +24,22 @@
 }
 
 
-
-
-
-
 /* 1 - Home*/
 
 .home-page {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
     align-items: stretch;
+    align-content: center;
 }
 
-.home-container {
-
-}
 
 .home-page .home-title {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
     align-items: center;
+    align-content: center;
     height: 100vh;
     background: url("/media/img/wormhole.jpg") no-repeat;
     background-size: cover;
@@ -55,13 +49,22 @@
 
 .home-page .home-title h1 {
     flex: 2;
-    font-size: 6em;
+    font-size: 5vw;
     line-height: 10px;
+    white-space: nowrap;
+    overflow: hidden;
     color: #fff;
-    position: relative;
-    top: 175px;
+    padding-top: 15%;
+    margin: 0 auto;
     font-family: 'Fredoka One', cursive;
+    animation: typing 8s steps(60, end);
 }
+
+.home-page .home-title button {
+    margin-bottom: 50px;
+
+}
+
 
 .home-page .home-title p {
     flex: 1;
@@ -71,39 +74,64 @@
     font-family: 'Fredoka One', cursive;
 }
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
 .home-service {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: center;
+    height: 300px;
     background: url("/media/img/planet-space-art.jpg") no-repeat fixed;
     background-size: cover;
+    border-top: white solid 1px;
+    border-bottom: white solid 1px;
 }
 
 .service-card {
-    height: 300px;
-    width: 400px;
-    margin: 20px;
-    border: white;
-    background-color: #444444;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    height: 75%;
+    width: 25%;
+    border: white solid 1px;
+    background: url("/media/img/star-card.jpg") no-repeat;
+    background-size: cover;
+}
+
+.slide-up {
+    position: absolute;
+    background: #000;
+    opacity: 0.7;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 15%;
+    padding: 5%;
+    color: #fff;
+    overflow: hidden;
 }
 
 .home-test {
-    height: auto;
-    background-color: #7a43b6;
-    opacity: 0.6;
+    height: 300px;
+    background: url("/media/img/stars.jpg") no-repeat;
+    background-size: cover;
 }
 
 /* carousel */
 
-.row h2 {
+.home-test h2 {
 	text-align: center;
 	margin-top: 40px;
 	font-weight: bold;
 }
 
 #quote-carousel {
-	padding: 0 10px 30px 10px;
+	padding: 0 10px 0 10px;
 	margin-top: 25px;
 }
 
@@ -113,21 +141,20 @@
 	font-size: 2em;
 	text-shadow: none;
 	margin-top: 30px;
+    height: 50px;
 }
 
 #quote-carousel .carousel-indicators {
-	position: absolute;
-	right: 50%;
-	top: auto;
-	bottom: 0;
-	margin-top: 20px;
-	margin-bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-@media (max-width: 800px) {
-	#quote-carousel .carousel-indicators {
-		margin-bottom: -15px;
-	}
+@media screen and (min-width: 799px) {
+    #quote-carousel .carousel-indicators li {
+        margin-top: -20px;
+    }
 }
 
 #quote-carousel .carousel-indicators li {
@@ -161,14 +188,8 @@
     margin-bottom: 5%;
 }
 
-@media (max-width: 600px) {
-	.item blockquote {
-		margin-bottom: 35%;
-	}
-}
-
 .item blockquote p:before {
-    font-family: 'Fontawesome';
+    font-family: 'Fontawesome', sans-serif;
     float: left;
     margin-right: 10px;
 }
@@ -181,4 +202,82 @@
 
 .contact-page {
     padding-top: 120px;
+    background: url("/media/img/bable.jpg");
+    background-size: contain;
+}
+
+/* Footer */
+
+.footer-distributed {
+	background-color: black;
+    border-top: white solid 1px;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+	padding: 25px 50px;
+	overflow: hidden;
+	/*margin-top: 80px;*/
+}
+
+.footer-distributed .footer-left p {
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links {
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a {
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+
+@media (max-width: 600px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right {
+		text-align: center;
+	}
+
+	.footer-distributed .footer-right {
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.footer-distributed .footer-left p.footer-links {
+		line-height: 1.8;
+	}
 }
