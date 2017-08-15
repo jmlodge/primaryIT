@@ -1,9 +1,27 @@
 angular.module('RouteControllers', [])
 
     .controller('HomeController', function ($scope) {
-       $scope.title = "Welcome to PrimaryIT!";
-       $scope.subtitle = "Don't Panic, We Have A Solution For You!";
-       $scope.image = [{src: 'media/img/atom.png'}];
+        angular.element(document).ready(function() {
+            $('#mobile').on("mouseenter", function () {
+                $(this).find('.slide-up').stop().animate({height: "90%"})
+            });
+            $('#mobile').on("mouseleave", function () {
+                $(this).find('.slide-up').stop().animate({height: "15%"}, 1000, function () {
+
+                })
+            });
+            $('.text-slider').slick({
+                vertical: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                speed: 700,
+                dots: false,
+                prevArrow: false,
+                nextArrow: false
+            })
+        });
+        $scope.title = "Welcome to PrimaryIT!";
+        $scope.image = [{src: 'media/img/atom.png'}];
     })
 
     .controller('ContactController', function ($scope) {
